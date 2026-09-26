@@ -6,7 +6,7 @@ contacts = []
 
 contacts.append(Contacts("John Doe", "123-456-7890"))
 
-while num != 5:
+while True:
     print("\nMenu: ")
     print("1. Add contact")
     print("2. List contacts")
@@ -36,14 +36,10 @@ while num != 5:
             name = input("Enter contact name to delete: ")
             for i in range(len(contacts)):
                 if contacts[i].name.lower() == name.lower():
-                    contacts[i].delete_contact()
                     del contacts[i]
                     print(f"Contact {name} deleted.")
                     break   
         case 5:
             print("Goodbye!")
             break   
-        case 6:
-            print("Contact Names:")
-            for contact in contacts:
-                print(contact.name)
+       
